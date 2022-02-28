@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar pedido</title>
+    <style>
+        table, th, td {
+            border: 1px solid;
+        }
+
+        /* BreadCrumbs */
+
+        /* Style the list */
+        ul.breadcrumb {
+        padding: 10px 16px;
+        list-style: none;
+        background-color: #eee;
+        }
+
+        /* Display list items side by side */
+        ul.breadcrumb li {
+        display: inline;
+        font-size: 18px;
+        }
+
+        /* Add a slash symbol (/) before/behind each list item */
+        ul.breadcrumb li+li:before {
+        padding: 8px;
+        color: black;
+        content: "/\00a0";
+        }
+
+        /* Add a color to all links inside the list */
+        ul.breadcrumb li a {
+        color: #0275d8;
+        text-decoration: none;
+        }
+
+        /* Add a color on mouse-over */
+        ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="breadcrumb">
+        <li><a href="menuPasterapia.html">Menú Pasterapia</a></li>
+        <li>Pedido</li>
+    </ul>
+
+    <h1>Aquí se hace el pedido</h1>
+
+    <form action="pedido.js">
+        <label for="nombre">Ingresa tu nombre, Pastciente</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        <br><br>
+        <label for="telefono">Teléfono</label>
+        <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
+        <br><br>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="email">
+        <br><br>
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Dirección">
+        <br><br>
+        <label for="horaFechaEntrega">Hora y fecha de entrega</label>
+        <input type="datetime-local" id="horaFechaEntrega" name="horaFechaEntrega">
+        <br><br>
+
+        <h2>**************** Elige el sabor de tu pastel ****************</h2>
+
+        <label for="relajante">Relajante</label>
+        <input type="checkbox" id="relajante" name="relajante" value="relajante">
+        <br>
+        <label for="consentidor">Consentidor</label>
+        <input type="checkbox" id="consentidor" name="consentidor" value="consentidor">
+        <br>
+        <label for="dulceMomento">Dulce Momento</label>
+        <input type="checkbox" id="dulceMomento" name="dulceMomento" value="dulceMomento">
+        <br>
+        <label for="playero">Playero</label>
+        <input type="checkbox" id="playero" name="playero" value="playero">
+        <br>
+        <label for="confidente">Confidente</label>
+        <input type="checkbox" id="confidente" name="confidente" value="confidente">
+        <br>
+        <label for="motivador">Motivador</label>
+        <input type="checkbox" id="motivador" name="motivador" value="motivador">
+        <br>
+        <label for="activate">Actívate</label>
+        <input type="checkbox" id="activate" name="activate" value="activate">
+        <br>
+        <label for="comfort">Comfort</label>
+        <input type="checkbox" id="comfort" name="comfort" value="comfort">
+
+
+        <h2>**************** Elige el adorno de tu pastel ****************</h2>
+
+        <label for="felizCumpleNoComestible">Feliz cumpleaños no comestible</label>
+        <input type="checkbox" id="felizCumpleNoComestible" name="felizCumpleNoComestible" value="felizCumpleNoComestible">
+        <br><br>
+        <label for="felizCumpleComestible">Feliz cumpleaños comestible</label>
+        <input type="checkbox" id="felizCumpleComestible" name="felizCumpleComestible" value="felizCumpleComestible">
+        <br><br>
+        <label for="velasSencillas">Velas sencillas</label>
+        <input type="checkbox" id="velasSencillas" name="velasSencillas" value="velasSencillas">
+        <input type="number" id="cuantosVelasSencillas" name="cuantosVelasSencillas" placeholder="Cuántas?">
+        <br><br>
+        <p>Elige velas de número</p>
+        <select name="velasNumero1" value="velasNumero1">
+            <option value="-1">NO</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <br><br>
+        <p>Elige velas de número</p>
+        <select name="velasNumero" value="velasNumero">
+            <option value="-1">NO</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <br><br>
+        <p>Elige velas de número</p>
+        <select name="velasNumero" value="velasNumero">
+            <option value="-1">NO</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <br><br>
+        <label for="velasChispas">Velas Chispas</label>
+        <input type="checkbox" id="velasChispas" name="velasChispas" value="velasChispas">
+        <input type="number" id="cuantosVelasChispas" name="cuantosVelasChispas" placeholder="Cuántas?">
+        <br><br>
+        <label for="corazonNoComestible">Corazón no comestible</label>
+        <input type="checkbox" id="corazonNoComestible" name="corazonNoComestible" value="corazonNoComestible">
+        <input type="number" id="cuantosCorazonNoComestible" name="cuantosCorazonNoComestible" placeholder="Cuántos?">
+        <br>
+        <label for="miniGloboNoComestible">Mini Globo no comestible</label>
+        <input type="checkbox" id="miniGloboNoComestible" name="miniGloboNoComestible" value="miniGloboNoComestible">
+        <input type="number" id="cuantosMiniGloboNoComestible" name="cuantosMiniGloboNoComestible" placeholder="Cuántos?">
+        <br>
+        <label for="RosaComestible">Rosa comestible</label>
+        <input type="checkbox" id="RosaComestible" name="RosaComestible" value="RosaComestible">
+        <input type="number" id="cuantosRosaComestible" name="cuantosRosaComestible" placeholder="Cuántas?">
+
+
+        <h2>**************** O quizá deseas algún paquete ****************</h2>
+
+        <label for="paqueteCelebremos">Paquete Celebremos</label>
+        <input type="checkbox" id="paqueteCelebremos" name="paqueteCelebremos" value="paqueteCelebremos">
+
+        <p>Elige sabor para tu pastel</p>
+
+        <label for="paqueteCelebremosRelajante">Relajante</label>
+        <input type="checkbox" id="paqueteCelebremosRelajante" name="paqueteCelebremosRelajante" value="relajante">
+        <br>
+        <label for="paqueteCelebremosConsentidor">Consentidor</label>
+        <input type="checkbox" id="consentidor" name="paqueteCelebremosConsentidor" value="paqueteCelebremosConsentidor">
+        <br>
+        <label for="paqueteCelebremosDulceMomento">Dulce Momento</label>
+        <input type="checkbox" id="paqueteCelebremosDulceMomento" name="paqueteCelebremosDulceMomento" value="paqueteCelebremosDulceMomento">
+        <br>
+        <label for="paqueteCelebremosPlayero">Playero</label>
+        <input type="checkbox" id="paqueteCelebremosPlayero" name="paqueteCelebremosPlayero" value="playero">
+        <br>
+        <label for="paqueteCelebremosConfidente">Confidente</label>
+        <input type="checkbox" id="paqueteCelebremosConfidente" name="paqueteCelebremosConfidente" value="confidente">
+        <br>
+        <label for="paqueteCelebremosMotivador">Motivador</label>
+        <input type="checkbox" id="paqueteCelebremosMotivador" name="paqueteCelebremosMotivador" value="motivador">
+        <br>
+        <label for="paqueteCelebremosActivate">Actívate</label>
+        <input type="checkbox" id="paqueteCelebremosActivate" name="paqueteCelebremosActivate" value="activate">
+        <br>
+        <label for="paqueteCelebremosComfort">Comfort</label>
+        <input type="checkbox" id="paqueteCelebremosComfort" name="paqueteCelebremosComfort" value="comfort">
+
+        <p>Elige un adorno</p>
+        <label for="PaqueteCelebremosFelizCumpleComestible">Feliz Cumpleaños Comestible</label>
+        <input type="radio" name="adornoPaqueteCelebremos" id="PaqueteCelebremosFelizCumpleComestible" value="Feliz Cumpleaños Comestible">
+        <label for="PaqueteCelebremosFelizCumpleNoComestible">Feliz Cumpleaños No Comestible</label>
+        <input type="radio" name="adornoPaqueteCelebremos" id="PaqueteCelebremosFelizCumpleNoComestible" value="Feliz Cumpleaños No Comestible">
+        
+        <br><br>
+        <hr>
+        <br><br>
+
+        <label for="paqueteAmor">Paquete Amor</label>
+        <input type="checkbox" id="paqueteAmor" name="paqueteAmor" value="paqueteAmor">
+
+        <p>Elige sabor para tu pastel</p>
+
+        <label for="paqueteAmorRelajante">Relajante</label>
+        <input type="checkbox" id="paqueteAmorRelajante" name="paqueteAmorRelajante" value="relajante">
+        <br>
+        <label for="paqueteAmorConsentidor">Consentidor</label>
+        <input type="checkbox" id="paqueteAmorConsentidor" name="paqueteAmorConsentidor" value="consentidor">
+        <br>
+        <label for="paqueteAmorDulceMomento">Dulce Momento</label>
+        <input type="checkbox" id="paqueteAmorDulceMomento" name="paqueteAmorDulceMomento" value="dulceMomento">
+        <br>
+        <label for="paqueteAmorPlayero">Playero</label>
+        <input type="checkbox" id="paqueteAmorPlayero" name="paqueteAmorPlayero" value="playero">
+        <br>
+        <label for="paqueteAmorConfidente">Confidente</label>
+        <input type="checkbox" id="paqueteAmorConfidente" name="paqueteAmorConfidente" value="confidente">
+        <br>
+        <label for="paqueteAmorMotivador">Motivador</label>
+        <input type="checkbox" id="paqueteAmorMotivador" name="paqueteAmorMotivador" value="motivador">
+        <br>
+        <label for="paqueteAmorActivate">Actívate</label>
+        <input type="checkbox" id="paqueteAmorActivate" name="paqueteAmorActivate" value="activate">
+        <br>
+        <label for="paqueteAmorComfort">Comfort</label>
+        <input type="checkbox" id="paqueteAmorComfort" name="paqueteAmorComfort" value="comfort">
+
+        <p>Elige un adorno</p>
+        <label for="PaqueteAmorCorazonNoComestible">Corazón no comestible</label>
+        <input type="radio" name="adornoPaqueteAmor" id="PaqueteAmorCorazonNoComestible" value="Corazón No Comestible">
+        <label for="PaqueteAmorRosaComestible">Rosa de betún</label>
+        <input type="radio" name="adornoPaqueteAmor" id="PaqueteAmorRosaComestible" value="Rosa Comestible">
+
+        
+        <br><br>
+        <hr>
+        <br><br>
+        
+        <label for="paqueteInfantil">Paquete Infantil</label>
+        <input type="checkbox" id="paqueteInfantil" name="paqueteInfantil" value="paqueteInfantil">
+
+        <p>Elige sabor para tu pastel</p>
+
+        <label for="paqueteInfantilRelajante">Relajante</label>
+        <input type="checkbox" id="paqueteInfantilRelajante" name="paqueteInfantilRelajante" value="relajante">
+        <br>
+        <label for="paqueteInfantilConsentidor">Consentidor</label>
+        <input type="checkbox" id="paqueteInfantilConsentidor" name="paqueteInfantilConsentidor" value="consentidor">
+        <br>
+        <label for="paqueteInfantilDulceMomento">Dulce Momento</label>
+        <input type="checkbox" id="paqueteInfantilDulceMomento" name="paqueteInfantilDulceMomento" value="dulceMomento">
+        <br>
+        <label for="paqueteInfantilPlayero">Playero</label>
+        <input type="checkbox" id="paqueteInfantilPlayero" name="paqueteInfantilPlayero" value="playero">
+        <br>
+        <label for="paqueteInfantilConfidente">Confidente</label>
+        <input type="checkbox" id="paqueteInfantilConfidente" name="paqueteInfantilConfidente" value="confidente">
+        <br>
+        <label for="paqueteInfantilMotivador">Motivador</label>
+        <input type="checkbox" id="paqueteInfantilMotivador" name="paqueteInfantilMotivador" value="motivador">
+        <br>
+        <label for="paqueteInfantilActivate">Actívate</label>
+        <input type="checkbox" id="paqueteInfantilActivate" name="paqueteInfantilActivate" value="activate">
+        <br>
+        <label for="paqueteInfantilComfort">Comfort</label>
+        <input type="checkbox" id="paqueteInfantilComfort" name="paqueteInfantilComfort" value="comfort">
+
+        <p>Elige un adorno</p>
+        <label for="paqueteInfantilVelaSencilla">Vela Sencilla</label>
+        <input type="radio" name="adornopaqueteInfantil" id="paqueteInfantilVelaSencilla" value="Vela Sencilla">
+        <label for="paqueteInfantilMiniGlobo">Mini Globo</label>
+        <input type="radio" name="adornopaqueteInfantil" id="paqueteInfantilMiniGlobo" value="Mini Globo No Comestible">
+
+
+        <br><br>
+        <hr>
+        <br><br>
+
+        <label for="paqueteMandes">Paquete Mandes</label>
+        <input type="checkbox" id="paqueteMandes" name="paqueteMandes" value="paqueteMandes">
+
+        <p>Elige sabor para tu pastel</p>
+
+        <label for="paqueteMandesRelajante">Relajante</label>
+        <input type="checkbox" id="paqueteMandesRelajante" name="paqueteMandesRelajante" value="relajante">
+        <br>
+        <label for="paqueteMandesConsentidor">Consentidor</label>
+        <input type="checkbox" id="paqueteMandesConsentidor" name="paqueteMandesConsentidor" value="consentidor">
+        <br>
+        <label for="paqueteMandesDulceMomento">Dulce Momento</label>
+        <input type="checkbox" id="paqueteMandesDulceMomento" name="paqueteMandesDulceMomento" value="dulceMomento">
+        <br>
+        <label for="paqueteMandesPlayero">Playero</label>
+        <input type="checkbox" id="paqueteMandesPlayero" name="paqueteMandesPlayero" value="playero">
+        <br>
+        <label for="paqueteMandesConfidente">Confidente</label>
+        <input type="checkbox" id="paqueteMandesConfidente" name="paqueteMandesConfidente" value="confidente">
+        <br>
+        <label for="paqueteMandesMotivador">Motivador</label>
+        <input type="checkbox" id="paqueteMandesMotivador" name="paqueteMandesMotivador" value="motivador">
+        <br>
+        <label for="paqueteMandesActivate">Actívate</label>
+        <input type="checkbox" id="paqueteMandesActivate" name="paqueteMandesActivate" value="activate">
+        <br>
+        <label for="paqueteMandesComfort">Comfort</label>
+        <input type="checkbox" id="paqueteMandesComfort" name="paqueteMandesComfort" value="comfort">
+
+
+        <p>Elige adorno para tu pastel</p>
+
+        <label for="paqueteMandesFelizCumpleañosComestible">Feliz cumpleaños Comestible</label>
+        <input type="checkbox" id="paqueteMandesFelizCumpleañosComestible" name="paqueteMandesFelizCumpleañosComestible" value="paqueteMandesFelizCumpleañosComestible">
+        <br>
+        <label for="paqueteMandesFelizCumpleañosNoComestible">Feliz cumpleaños No Comestible</label>
+        <input type="checkbox" id="paqueteMandesFelizCumpleañosNoComestible" name="paqueteMandesFelizCumpleañosNoComestible" value="paqueteMandesFelizCumpleañosNoComestible">
+        <br>
+        <label for="paqueteMandesVelaSencilla">Vela Sencilla</label>
+        <input type="checkbox" id="paqueteMandesVelaSencilla" name="paqueteMandesVelaSencilla" value="paqueteMandesVelaSencilla">
+        <br>
+        <label for="paqueteMandesVelaChispas">Vela Chispas</label>
+        <input type="checkbox" id="paqueteMandesVelaChispas" name="paqueteMandesVelaChispas" value="paqueteMandesVelaChispas">
+        <br>
+        <label for="paqueteMandesCorazonNoComestible">Corazón No Comestible</label>
+        <input type="checkbox" id="paqueteMandesCorazonNoComestible" name="paqueteMandesCorazonNoComestible" value="paqueteMandesCorazonNoComestible">
+        <br>
+        <label for="paqueteMandesMiniGloboNoComestible">Mini Globo No Comestible</label>
+        <input type="checkbox" id="paqueteMandesMiniGloboNoComestible" name="paqueteMandesMiniGloboNoComestible" value="paqueteMandesMiniGloboNoComestible">
+        <br>
+        <label for="paqueteMandesRosaComestible">Rosa Comestible</label>
+        <input type="checkbox" id="paqueteMandesRosaComestible" name="paqueteMandesRosaComestible" value="paqueteMandesRosaComestible">
+
+        <br><br>
+        <hr>
+        <br><br>
+
+        <a href="pasteleroHome.html">
+            <input type="button" value="Solicitar pedido">
+        </a>
+    </form>
+</body>
+</html>

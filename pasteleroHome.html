@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Pastelero</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid;
+        }
+
+        /* BreadCrumbs */
+
+        /* Style the list */
+        ul.breadcrumb {
+        padding: 10px 16px;
+        list-style: none;
+        background-color: #eee;
+        }
+
+        /* Display list items side by side */
+        ul.breadcrumb li {
+        display: inline;
+        font-size: 18px;
+        }
+
+        /* Add a slash symbol (/) before/behind each list item */
+        ul.breadcrumb li+li:before {
+        padding: 8px;
+        color: black;
+        content: "/\00a0";
+        }
+
+        /* Add a color to all links inside the list */
+        ul.breadcrumb li a {
+        color: #0275d8;
+        text-decoration: none;
+        }
+
+        /* Add a color on mouse-over */
+        ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <ul class="breadcrumb">
+        <li><a href="menuPasterapia.html">Menú Pasterapia</a></li>
+        <li>Pedido</li>
+    </ul>
+
+
+    <H1>Inventario de sabores</H1>
+
+    <table>
+        <tr>
+            <th>Sabor</th>
+            <th>Cantidad de porciones</th>
+            <th>Acciones</th>
+        </tr>
+        <tr>
+            <td>Vainilla</td>
+            <td>23</td>
+            <td>
+                <input type="number" id="actualizarVainilla" name="actualizarVainilla">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Fresa</td>
+            <td>21</td>
+            <td>
+                <input type="number" id="actualizarFresa" name="actualizarFresa">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Durazno</td>
+            <td>17</td>
+            <td>
+                <input type="number" id="actualizarDurazno" name="actualizarDurazno">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Piña</td>
+            <td>23</td>
+            <td>
+                <input type="number" id="actualizarPina" name="actualizarPina">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Cajeta</td>
+            <td>25</td>
+            <td>
+                <input type="number" id="actualizarCajeta" name="actualizarCajeta">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Tres Leches</td>
+            <td>20</td>
+            <td>
+                <input type="number" id="actualizarTresLeches" name="actualizarTresLeches">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Chocolate</td>
+            <td>15</td>
+            <td>
+                <input type="number" id="actualizarChocolate" name="actualizarChocolate">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Nuez</td>
+            <td>12</td>
+            <td>
+                <input type="number" id="actualizarNuez" name="actualizarNuez">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+    </table>
+
+    <H1>Inventario de adornos</H1>
+
+    <table>
+        <tr>
+            <th>Adorno</th>
+            <th>Cantidad de artículos</th>
+            <th>Acciones</th>
+        </tr>
+        <tr>
+            <td>Feliz cumpleaños Comestible</td>
+            <td>32</td>
+            <td>
+                <input type="number" id="actualizarFelizCumpleanosComestible" name="actualizarFelizCumpleanosComestible">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Feliz cumpleaños No Comestible</td>
+            <td>40</td>
+            <td>
+                <input type="number" id="actualizarFelizCumpleanosNoComestible" name="actualizarFelizCumpleanosNoComestible">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Sencilla</td>
+            <td>19</td>
+            <td>
+                <input type="number" id="actualizarVelaSencilla" name="actualizarVelaSencilla">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Número 0</td>
+            <td>5</td>
+            <td>
+                <input type="number" id="actualizarVelaNumero0" name="actualizarVelaNumero0">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Número 1</td>
+            <td>7</td>
+            <td>
+                <input type="number" id="actualizarVelaNumero1" name="actualizarVelaNumero1">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Número 2</td>
+            <td>12</td>
+            <td>
+                <input type="number" id="actualizarVelaNumero2" name="actualizarVelaNumero2">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Número 3</td>
+            <td>7</td>
+            <td>
+                <input type="number" id="actualizarVelaNumero3" name="actualizarVelaNumero3">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Número 4</td>
+            <td>5</td>
+            <td>
+                <input type="number" id="actualizarVelaNumero4" name="actualizarVelaNumero4">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Número 5</td>
+            <td>3</td>
+            <td>
+                <input type="number" id="actualizarVelaNumero5" name="actualizarVelaNumero5">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Número 6</td>
+            <td>5</td>
+            <td>
+                <input type="number" id="actualizarVelaNumero6" name="actualizarVelaNumero6">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Número 7</td>
+            <td>2</td>
+            <td>
+                <input type="number" id="actualizarVelaNumero7" name="actualizarVelaNumero7">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Número 8</td>
+            <td>1</td>
+            <td>
+                <input type="number" id="actualizarVelaNumero8" name="actualizarVelaNumero8">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Número 9</td>
+            <td>2</td>
+            <td>
+                <input type="number" id="actualizarVelaNumero9" name="actualizarVelaNumero9">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Vela Chispas</td>
+            <td>12</td>
+            <td>
+                <input type="number" id="actualizarVelaChispas" name="actualizarVelaChispas">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Corazón No Comestible</td>
+            <td>14</td>
+            <td>
+                <input type="number" id="actualizarCorazonNoComestible" name="actualizarCorazonNoComestible">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Mini Globo</td>
+            <td>14</td>
+            <td>
+                <input type="number" id="actualizarMiniGloboNoComestible" name="actualizarMiniGloboNoComestible">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+        <tr>
+            <td>Rosa de Betún</td>
+            <td>11</td>
+            <td>
+                <input type="number" id="actualizarRosaComestible" name="actualizarRosaComestible">
+                <input type="button" value="Actualizar Inventario">
+            </td>
+        </tr>
+    </table>
+
+
+    <H1>Tabla de pedidos</H1>
+
+    <table>
+        <tr>
+            <th>No. Pedido</th>
+            <th>Cliente</th>
+            <th>Dirección</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Raul Bernal</td>
+            <td>Las Lomas #20102 Fracc. Lomas Bonitas Guadalajara Jalisco México</td>
+            <td>
+                <ul>Pastel
+                    <li>Nuez</li>
+                    <li>Chocolate</li>
+                </ul>
+                <ul>Adorno
+                    <li>Feliz cumpleaños comestible</li>
+                    <li>Vela sencilla</li>
+                    <li>Vela de chispas</li>
+                </ul>
+            </td>
+            <td>
+                <select id="estadoPedido" name="estadoPedido">
+                    <option value="solicitado">Solicitado</option>
+                    <option value="preparando">Preparando</option>
+                    <option value="listo">Listo</option>
+                    <option value="enviado">Enviado</option>
+                    <option value="entregado">Entregado</option>
+                    <option value="cancelado">Cancelado</option>
+                </select>
+                <input type="button" value="Actualizar Estado">
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Raul Bernal</td>
+            <td>Las Lomas #20102 Fracc. Lomas Bonitas Guadalajara Jalisco México</td>
+            <td>
+                <ul>Pastel
+                    <li>Nuez</li>
+                    <li>Chocolate</li>
+                </ul>
+                <ul>Adorno
+                    <li>Feliz cumpleaños comestible</li>
+                    <li>Vela sencilla</li>
+                    <li>Vela de chispas</li>
+                </ul>
+            </td>
+            <td>
+                <select id="estadoPedido" name="estadoPedido">
+                    <option value="solicitado">Solicitado</option>
+                    <option value="preparando">Preparando</option>
+                    <option value="listo">Listo</option>
+                    <option value="enviado">Enviado</option>
+                    <option value="entregado">Entregado</option>
+                    <option value="cancelado">Cancelado</option>
+                </select>
+                <input type="button" value="Actualizar Estado">
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Raul Bernal</td>
+            <td>Las Lomas #20102 Fracc. Lomas Bonitas Guadalajara Jalisco México</td>
+            <td>
+                <ul>Pastel
+                    <li>Nuez</li>
+                    <li>Chocolate</li>
+                </ul>
+                <ul>Adorno
+                    <li>Feliz cumpleaños comestible</li>
+                    <li>Vela sencilla</li>
+                    <li>Vela de chispas</li>
+                </ul>
+            </td>
+            <td>
+                <select id="estadoPedido" name="estadoPedido">
+                    <option value="solicitado">Solicitado</option>
+                    <option value="preparando">Preparando</option>
+                    <option value="listo">Listo</option>
+                    <option value="enviado">Enviado</option>
+                    <option value="entregado">Entregado</option>
+                    <option value="cancelado">Cancelado</option>
+                </select>
+                <input type="button" value="Actualizar Estado">
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Raul Bernal</td>
+            <td>Las Lomas #20102 Fracc. Lomas Bonitas Guadalajara Jalisco México</td>
+            <td>
+                <ul>Pastel
+                    <li>Nuez</li>
+                    <li>Chocolate</li>
+                </ul>
+                <ul>Adorno
+                    <li>Feliz cumpleaños comestible</li>
+                    <li>Vela sencilla</li>
+                    <li>Vela de chispas</li>
+                </ul>
+            </td>
+            <td>
+                <select id="estadoPedido" name="estadoPedido">
+                    <option value="solicitado">Solicitado</option>
+                    <option value="preparando">Preparando</option>
+                    <option value="listo">Listo</option>
+                    <option value="enviado">Enviado</option>
+                    <option value="entregado">Entregado</option>
+                    <option value="cancelado">Cancelado</option>
+                </select>
+                <input type="button" value="Actualizar Estado">
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
