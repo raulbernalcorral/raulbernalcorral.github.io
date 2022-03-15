@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex LaunchX</title>
+    <link href="./pokedex.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- <form action="" onsubmit="searchPokemon(event)"> -->
+        <H1>Pokedex Launch X</H1>
+        <input type="text" placeholder="Pikachu" id="txtPokeName" name="txtPokeName">
+        <button onclick="fetchPokemon()">Search Pokemon</button>
+    <!-- </form> -->
+    <div id="dataPokeCard" class="poke-card">
+        <div class="bigCircle"></div>
+        <div class="smallCircle smallCircle1"></div>
+        <div class="smallCircle smallCircle2"></div>
+        <div class="smallCircle smallCircle3"></div>
+        <div id="dataPokeImgContainer" class="img-container">
+            <h2 id="dataPokeName">Pokedex</h2>
+            <img id="dataPokeImg" class="poke-img" src="./assets/images/poke-shadow.png"/>
+        </div>
+        <!-- <div id="dataPokeId"></div> -->
+        <h3>Types</h3>
+        <div id="dataPokeTypes" class="poke-types"></div>
+        <h3>Stats</h3>
+        <div id="dataPokeStats" class="poke-stats"></div>
+    </div>
+    <div id="dataPokeCardBack" class="poke-card-back">
+        <h3>Moves</h3>
+        <div id="dataPokeMoves" class="poke-moves"></div>
+    </div>
+
+
+
+    <!-- <H1>Pokedex Launch X</H1>
+    <input type="text" placeholder="Pikachu" id="txtPokeName" name="txtPokeName">
+    <br>
+    <img src="./avoid.png" alt="pokemon" width="150px" id="pokeImg" name="pokeImg">
+    <br>
+    <button onclick="fetchPokemon()">Cambiar Pokemon</button> -->
+</body>
+</html>
+<footer>
+    <script src="./pokedexLaunchX.js"></script>
+</footer>
